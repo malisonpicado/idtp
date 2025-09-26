@@ -6,23 +6,23 @@ The **Indexed Data Transfer Protocol (IDTP)** introduces a new paradigm for IoT 
 
 ---
 
-## 📖 Protocol Overview
+## Protocol Overview
 
 IDTP is based on reading and writing a set of system variables, where each variable is uniquely identified by an index.
 
 Formally, the system is defined as:
 
 $$
-V = \{V_0, V_1, V_2, ..., V_n\}
+V = \\{V_0, V_1, V_2, ..., V_n\\}
 $$
 
 Where **V** is a set of variables arranged as a matrix of *N* columns and 1 row, with indices starting at 0. Each variable has an assigned data type, which can vary depending on the access mode configured on the server. Variables can be linked to one or more devices that depend on them, enabling efficient system management and control. Whenever a variable value is updated, the new value is instantly transmitted to all dependent devices. Clients receive updates for all variables in real time, ensuring complete system synchronization.
 
 ---
 
-## 🏷 Version & Status
+## Version & Status
 
-**Current Specification:** `v0.1.0-beta`  
+**Current Specification:** `v0.2.0-beta`  
 **Protocol Version Byte (Wire):** `0x00`
 
 > ⚠️ **Note:** This is a beta release.  
@@ -31,7 +31,7 @@ Where **V** is a set of variables arranged as a matrix of *N* columns and 1 row,
 
 ---
 
-## 📜 License
+## License
 
 This project uses a **custom permissive license**.
 
@@ -45,18 +45,20 @@ See [LICENSE.md](./LICENSE.md) for full text.
 
 ---
 
-## 🗓 Changelog
+## Changelog
 
-### v0.1.0-beta (2025-09-15)
-- Initial publication of the protocol specification.
-- Defined base variable model (`V = {V0, V1, ..., Vn}`).
-- Implemented real-time variable updates and broadcasting behavior.
-- Added support for indexed variable data types.
+### v0.2.0-beta (2025-09-25)
 
+**Fixed**: 
+
+- Updated device parameter definition
+- Updated PING definition
+- Error Fixed: the GET method format data type now has 4 bits length and index length has 2 bits length (normal mode and expanded mode). Method is now specified at bit no. 7.
+- Error Fixed: device parameter declaration format, index length has 2 bits length instead of 3 bits
 
 ---
 
-## 🙌 Contributing
+## Contributing
 
 Contributions, proposals, and discussions are welcome!  
 Please open issues or pull requests to suggest changes or report problems.  
