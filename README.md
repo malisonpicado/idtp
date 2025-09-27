@@ -22,7 +22,7 @@ Where **V** is a set of variables arranged as a matrix of *N* columns and 1 row,
 
 ## Version & Status
 
-**Current Specification:** `v0.2.0-beta`  
+**Current Specification:** `v0.3.0-beta`  
 **Protocol Version Byte (Wire):** `0x00`
 
 > ⚠️ **Note:** This is a beta release.  
@@ -47,14 +47,12 @@ See [LICENSE.md](./LICENSE.md) for full text.
 
 ## Changelog
 
-### v0.2.0-beta (2025-09-25)
+### v0.3.0-beta (2025-09-26)
 
 **Fixed**: 
 
-- Updated device parameter definition
-- Updated PING definition
-- Error Fixed: the GET method format data type now has 4 bits length and index length has 2 bits length (normal mode and expanded mode). Method is now specified at bit no. 7.
-- Error Fixed: device parameter declaration format, index length has 2 bits length instead of 3 bits
+- Error Fixed: Disconnect and Ping now has differente code. PING = 0x01, DISCONNECT = 0x02. Previously, this two management code were the same.
+- The byte mapping notation for variable fields (index and data) has been clarified by using the variable L (Index Length) to define the exact positions.
 
 ---
 
