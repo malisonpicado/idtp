@@ -1,5 +1,7 @@
 # Indexed Data Transfer Protocol (IDTP)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239895.svg)](https://doi.org/10.5281/zenodo.17239895)
+
 ## Introduction
 
 The **Indexed Data Transfer Protocol (IDTP)** introduces a new paradigm for IoT data management by organizing system information as a set of uniquely indexed variables, enabling precise and efficient read/write operations. Unlike traditional transmission-focused protocols, IDTP emphasizes persistence and reliability by maintaining the latest state of each variable and instantly synchronizing updates across all connected devices. This indexed, modular approach ensures real-time communication, minimizes unnecessary data transfer, and provides robust scalability for complex IoT ecosystems.
