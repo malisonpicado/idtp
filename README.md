@@ -1,6 +1,7 @@
 # Indexed Data Transfer Protocol (IDTP)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239895.svg)](https://doi.org/10.5281/zenodo.17239895)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17239894.svg)](https://doi.org/10.5281/zenodo.17239894)
+
 
 ## Introduction
 
@@ -24,7 +25,7 @@ Where **V** is a set of variables arranged as a matrix of *N* columns and 1 row,
 
 ## Version & Status
 
-**Current Specification:** `v0.3.0-beta`  
+**Current Specification:** `v0.4.0-beta`  
 **Protocol Version Byte (Wire):** `0x00`
 
 > ⚠️ **Note:** This is a beta release.  
@@ -49,12 +50,15 @@ See [LICENSE.md](./LICENSE.md) for full text.
 
 ## Changelog
 
-### v0.3.0-beta (2025-09-26)
+### v0.4.0-beta (2025-10-05)
 
-**Fixed**: 
+**Changes**: 
 
-- Error Fixed: Disconnect and Ping now has differente code. PING = 0x01, DISCONNECT = 0x02. Previously, this two management code were the same.
-- The byte mapping notation for variable fields (index and data) has been clarified by using the variable L (Index Length) to define the exact positions.
+1. (+) Added Parameter Indexing
+2. Modified Byte 2 of the persistent connection request. Bit 3 declares the optional use of parameter indexing.
+3. Changed how device requests are processed based on the parameter indexing option.
+4. Better description for the index length of a variable.
+5. Added response code: "Parameter indexing enabled, but no parameters were declared".
 
 ---
 
